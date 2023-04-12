@@ -19,4 +19,3 @@ public class EmptyStringExceptionDemo {
     }
 }
 
-// Вроде сделал все верно, но у меня этот код отказывается запускаться.
