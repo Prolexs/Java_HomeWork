@@ -12,13 +12,28 @@ public class Main {
         System.out.println("Введите фамилию:");
         String surname = scanner.nextLine().trim().toUpperCase();
 
+        while (!surname.matches("[A-Za-zА-Яа-я-]+")) {
+            System.out.println("Ошибка ввода! Фамилия может содержать только буквы одного языка и знак \"-\". Введите фамилию заново:");
+            surname = scanner.nextLine().trim().toUpperCase();
+        }
+
         // Запрос имени пользователя
         System.out.println("Введите имя:");
         String name = scanner.nextLine().trim();
 
+        while (!name.matches("[A-Za-zА-Яа-я-]+")) {
+            System.out.println("Ошибка ввода! Имя может содержать только буквы одного языка и знак \"-\". Введите имя заново:");
+            name = scanner.nextLine().trim();
+        }
+
         // Запрос отчества пользователя
         System.out.println("Введите отчество:");
         String middleName = scanner.nextLine().trim();
+
+        while (!middleName.matches("[A-Za-zА-Яа-я-]+")) {
+            System.out.println("Ошибка ввода! Отчество может содержать только буквы одного языка и знак \"-\". Введите отчество заново:");
+            middleName = scanner.nextLine().trim();
+        }
 
         // Запрос даты рождения пользователя
         System.out.println("Введите дату рождения в формате дд.мм.гггг:");
@@ -74,3 +89,4 @@ public class Main {
         }
     }
 }
+
